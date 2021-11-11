@@ -11,10 +11,16 @@
 <body>
         <div>
             <h1>Calculadora de IMC</h1>
+
             <label for="">Insira a sua altura</label>
             <input type="number" name="altura" id="altura" placeholder="ex:1.60"><br>
+
             <label for="">Insira o seu peso</label>
             <input type="number" name="peso" id="peso" placeholder="60"><br>
+            
+            <label for="" id="label">Qual é o seu género?</label>
+            <input type="radio" name="type">Masculino
+            <input type="radio" name="type">Feminino <br>
 
             <input type="button" value="Calcular" class="botao" onclick="clicar()"><br>
             <label for="" id="resultado">Seu IMC é...</label>

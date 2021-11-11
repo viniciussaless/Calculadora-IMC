@@ -2,13 +2,16 @@ function clicar(){
    var altura =  document.getElementById("altura")
    var peso = document.getElementById("peso")
    var res = document.getElementById("resultado")
+   var type = document.getElementsByName("type")
+  
 
    var n1 = Number(peso.value)
    var n2 = Number(altura.value)
    var n3 = n1 / (n2*n2)
    var total = n3.toFixed(3);
 
-   if(total < 18.5 ){
+   
+   if(total < 18.5){
       res.innerHTML = `Seu IMC foi ${total} e a sua classificação é MAGREZA!`
    }
    else if(total >= 18.5 && total <= 24.9){
