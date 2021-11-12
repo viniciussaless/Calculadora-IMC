@@ -5,7 +5,7 @@
 body{
     background: rgba(30, 255, 0, 0.534)
 }
-.botao{
+#botao, #limpar{
     background: transparent;
     border-radius: 10px;
     border: 1.8px solid black;
@@ -15,7 +15,7 @@ body{
     margin-bottom: 30px;
     margin-top: 20px;
 }
-.botao:hover{
+#botao, #limpar:hover{
     cursor: pointer;
 }
 div{
@@ -41,7 +41,7 @@ input{
     border-radius: 6px;
     font-size: 1.3em;
 }
-#resultado{
+#resultado, #ideal{
     background-color: white;
     border-radius: 10px;
     font-size: 20px;
