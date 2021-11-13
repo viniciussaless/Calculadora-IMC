@@ -20,7 +20,11 @@ function clicar(){
       document.location.reload()
    }
    else{
-      if(type[1].checked && n2 == 1.45){
+      if(type[1].checked && n2 < 1.45)
+      {
+         ideal.innerHTML = "Como você selecionou o género FEMININO, por favor insira uma altura igual ou superior a 1.45m"
+      }
+      else if(type[1].checked && n2 == 1.45){
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 37,8Kg a 52,5Kg"
       }
       else if(type[1].checked && n2 > 1.45 && n2 <= 1.47){
@@ -90,6 +94,10 @@ function clicar(){
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 65.7Kg a 91.2Kg"
       }
 
+      if(type[0].checked && n2 < 1.37)
+      {
+         ideal.innerHTML = "Como você selecionou o género MASCULINO, por favor insira uma altura igual ou superior a 1.37m"
+      }
       if(type[0].checked && n2 == 1.37)
       {
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 29Kg a 35Kg"

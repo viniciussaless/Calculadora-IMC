@@ -3,9 +3,8 @@
     padding: 0px;
 }
 :root{
-    --cor1: #1481ba;
-    --cor2: #034748;
-    --cor3: #001021;
+    --cor1: #289df6;
+
 }
 body{
     background: var(--cor1)
@@ -15,8 +14,9 @@ div{
     margin: auto;
     margin-top: 50px;
     text-align: center;
-    background-color: var(--cor2);
-    border-radius: 10px;
+    /*background-color: rgba(0, 128, 0, 0.548);*/
+    background-color: #fff;
+    border-radius: 30px;
     width: 600px;
     height: 450px;
 }
@@ -53,7 +53,7 @@ h1{
     cursor: pointer;
 }
 #botao, #limpar{
-    background: var(--cor3);
+    background: #289df6;
     border-radius: 10px;
     border: 1.8px solid black;
     font-size: 20px;
@@ -64,11 +64,10 @@ h1{
 }
 #botao:hover,#limpar:hover{
     cursor: pointer;
-    color: var(--cor3);
-    background-color: rgb(161, 148, 148);
+    color: #000;
+    transition: .4s;
 }
 #resultado, #ideal{
-    background-color: white;
     border-radius: 10px;
     font-size: 20px;
     padding: 10px 15px 10px 15px;
