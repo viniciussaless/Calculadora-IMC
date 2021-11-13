@@ -1,6 +1,5 @@
 function limpo(){
-   document.getElementById("altura").value = "";
-   document.getElementById("peso").value = "";
+   document.location.reload()
 }
 function clicar(){
    var altura =  document.getElementById("altura")
@@ -18,7 +17,7 @@ function clicar(){
    if(peso.value == "" || altura.value == "" || type[0].checked == false && type[1].checked == false)
    {
       window.alert("ERRO! PREENCHA TODOS OS CAMPOS!")
-      document.location.reload();
+      document.location.reload()
    }
    else{
       if(type[1].checked && n2 == 1.45){

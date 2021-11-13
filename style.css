@@ -2,44 +2,70 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+    --cor1: #1481ba;
+    --cor2: #034748;
+    --cor3: #001021;
+}
 body{
-    background: rgba(30, 255, 0, 0.534)
+    background: var(--cor1)
+}
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    width: 600px;
+    height: 450px;
+}
+h1{
+    font-weight: normal;
+    font-size: 2.4em;
+}
+.a{
+    font-size: 1.2em;
+}
+.p{
+    font-size: 1.2em;
+    margin-left: -1px;
+    margin-right: 5px;
+}
+#altura, #peso{
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 2px groove black;
+    font-size: 1.3em;
+    width: 100px;
+    height: 23px;
+}
+#label{
+    
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+.s{
+    height: 15px;
+    margin: 30px 4px 10px 0px;
+}
+.s:hover{
+    cursor: pointer;
 }
 #botao, #limpar{
-    background: transparent;
+    background: var(--cor3);
     border-radius: 10px;
     border: 1.8px solid black;
     font-size: 20px;
     width: 100px;
     height: 40px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin: 20px 30px 40px 30px;
+    color: white;
 }
-#botao, #limpar:hover{
+#botao:hover,#limpar:hover{
     cursor: pointer;
-}
-div{
-    margin: auto;
-    margin-top: 50px;
-    text-align: center;
-    background-color: green;
-    border-radius: 10px;
-    width: 650px;
-    height:500px;
-}
-label{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-}
-#label{
-    margin-left: -10px;
-    padding-right: 10px;
-}
-input{
-    margin-bottom: 10px;
-    margin-top: 30px;
-    border-radius: 6px;
-    font-size: 1.3em;
+    color: var(--cor3);
+    background-color: rgb(161, 148, 148);
 }
 #resultado, #ideal{
     background-color: white;

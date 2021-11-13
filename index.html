@@ -12,21 +12,21 @@
         <div>
             <h1>Calculadora de IMC</h1>
 
-            <label for="">Insira a sua altura</label>
+            <label for="" class="a">Insira a sua altura</label>
             <input type="number" name="altura" id="altura" placeholder="ex:1.60"><br>
 
-            <label for="">Insira o seu peso</label>
+            <label for="" class="p">Insira o seu peso</label>
             <input type="number" name="peso" id="peso" placeholder="ex:60" required><br>
             
             <label for="" id="label">Qual é o seu género?</label>
-            <input type="radio" name="type" >Masculino
-            <input type="radio" name="type">Feminino <br>
+            <input type="radio" name="type" class="s">Masculino
+            <input type="radio" name="type" class="s">Feminino <br>
 
             <input type="button" value="Calcular" id="botao" onclick="clicar()"> 
-            <button type="reset" id="limpar" onclick="limpo('type')";>Limpar</button> <br>
+            <button type="button" id="limpar" onclick="limpo()">Limpar</button> <br>
 
             <label for="" id="resultado">Seu IMC é...</label> <br><br><br>
-            <label for="" id="ideal">Seu peso...</label>
+            <label for="" id="ideal">Seu peso ideal é...</label>
         </div>
 </body>
 </html>
