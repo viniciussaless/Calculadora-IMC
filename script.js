@@ -1,24 +1,24 @@
-function limpo(){
+function limpo(){ //BOTÃO LIMPAR
    document.location.reload()
 }
-function clicar(){
+function clicar(){ //BOTÃO CALCULAR
    var altura =  document.getElementById("altura")
    var peso = document.getElementById("peso")
    var res = document.getElementById("resultado")
    var type = document.getElementsByName("type")
    var ideal = document.getElementById("ideal")
-
-   
    var n1 = Number(peso.value)
    var n2 = Number(altura.value)
    var n3 = n1 / (n2*n2)   
    var total = n3.toFixed(3);
 
+   /*------------------------------- ERRO QUANDO DEIXAR ALGUM CAMPO VAZIO -------------------------------*/
    if(peso.value == "" || altura.value == "" || type[0].checked == false && type[1].checked == false)
    {
       window.alert("ERRO! PREENCHA TODOS OS CAMPOS!")
       document.location.reload()
    }
+   /*------------------------------- PESO IDEAL PARA FEMININO -------------------------------*/
    else{
       if(type[1].checked && n2 < 1.45)
       {
@@ -93,7 +93,10 @@ function clicar(){
       else if(type[1].checked && n2 > 1.87 && n2 <= 1.91){
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 65.7Kg a 91.2Kg"
       }
-
+      else if(type[1].checked && n2 > 1.91){
+         ideal.innerHTML = "Como você selecionou o género FEMININO, por favor insira uma altura igual ou inferior a 1.91m"
+      }
+      /*------------------------------- PESO IDEAL PARA MASCULINO -------------------------------*/
       if(type[0].checked && n2 < 1.37)
       {
          ideal.innerHTML = "Como você selecionou o género MASCULINO, por favor insira uma altura igual ou superior a 1.37m"
@@ -144,7 +147,7 @@ function clicar(){
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 60Kg a 74Kg"
       }else if(type[0].checked && n2 > 1.70 && n2 <= 1.73)
       {
-         ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 63Kg a 67Kg"
+         ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 63Kg a 76Kg"
       }else if(type[0].checked && n2 > 1.73 && n2 <= 1.75)
       {
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 65Kg a 80Kg"
@@ -182,8 +185,10 @@ function clicar(){
       {
          ideal.innerHTML = "De acordo com a sua altura seu peso ideal é de 92Kg a 113Kg"
       }
-      
-
+      else if(type[0].checked && n2 > 2.03){
+         ideal.innerHTML = "Como você selecionou o género MASCULINO, por favor insira uma altura igual ou inferior a 2.03m"
+      }
+      /*------------------------------- TABELA DE IMC -------------------------------*/
       if(total < 18.5){
          res.innerHTML = `Seu IMC foi ${total} e a sua classificação é MAGREZA!`
       }
