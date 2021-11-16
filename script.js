@@ -11,7 +11,7 @@ function clicar(){
    
    var n1 = Number(peso.value)
    var n2 = Number(altura.value)
-   var n3 = n1 / (n2*n2)
+   var n3 = n1 / (n2*n2)   
    var total = n3.toFixed(3);
 
    if(peso.value == "" || altura.value == "" || type[0].checked == false && type[1].checked == false)
